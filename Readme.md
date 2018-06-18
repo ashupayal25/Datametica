@@ -1,6 +1,6 @@
 ********Project Structure*********
 
-1) CashWithdrawalSystem/input.txt: This file contains the available cash balance in system.
+1) CashDispenser/input.txt: This file contains the available cash balance in system.
 	E.g. 10 1000 i.e., There are 1000 notes available of 10Rs.
 2) The log file gets generated in C:\\ folder as cashwithdrawal.log.
 
@@ -15,22 +15,29 @@
 	For Eg:
 		java -jar CashDispenser-0.9-SNAPSHOT-jar-with-dependencies.jar 5000 200 10 10000
 
+***************Assumptions******************
+
+1) System only takes amount which are multiple of 10
+2) System only contains denomination which are multiple of 10
+3) Currently system supports multiple withdrawal at same time by creating multiple threads
+4) To show multiple withdrawals, we are taking multiple amount as parameters to the system.
 
 ********Sample Input/Output Example*********
 
-Input:
-
+I/P:
 	java -jar CashDispenser-0.9-SNAPSHOT-jar-with-dependencies.jar 300 10 10000
-
-
-Output:
+O/P:
 --------------------------------------------
-2018-06-18 21:41:43 INFO :- Denominations dispensed for amount 300 
+2018-06-17 20:46:44 INFO :- Denominations dispensed for amount 300 
 6 notes of 50 Rs.
 --------------------------------------------
-2018-06-18 21:41:43 INFO :- Denominations dispensed for amount 10 
+2018-06-17 20:46:44 INFO :- Denominations dispensed for amount 10 
 1 notes of 10 Rs.
 --------------------------------------------
-2018-06-18 21:41:43 INFO :- Denominations dispensed for amount 10000 
+2018-06-17 20:46:44 INFO :- Denominations dispensed for amount 10000 
 1 notes of 2000 Rs. 
 16 notes of 500 Rs.
+
+
+
+
